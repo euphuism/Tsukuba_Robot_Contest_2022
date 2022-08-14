@@ -173,3 +173,5 @@ catkin_ws/devel/.private/catkin_tools_prebuild/share/catkin_tools_prebuild/cmake
 catkin_ws/devel/lib/pkgconfig/catkin_tools_prebuild.pc
 catkin_ws/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
 catkin_ws/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+.vscode/arduino.json
+.vscode/c_cpp_properties.json
