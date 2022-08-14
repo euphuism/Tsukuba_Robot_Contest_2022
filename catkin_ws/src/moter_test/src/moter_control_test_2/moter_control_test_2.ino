@@ -11,7 +11,8 @@ int64_t pwm1;
 
 void messangeCb(const std_msgs::String& toggle_msg)
 {
-  pwm1 = toggle_msg.toInt();
+  String str = toggle_msg;
+  pwm1 = str.toInt();
 }
 
 ros::Subscriber<std_msgs::String&> sub("toggle_led", &messangeCb);
