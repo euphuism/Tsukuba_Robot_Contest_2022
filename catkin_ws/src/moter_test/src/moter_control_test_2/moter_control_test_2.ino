@@ -1,25 +1,41 @@
 #include <ros.h>
 #include <std_msgs/Int64.h>
 
+#define PIN_PWM_LEFT 10
+#define PIN_DIR_LEFT 11
+#define PIN_PWM_RIGHT 8
+#define PIN_DIR_RIGHT 9
+
 ros::NodeHandle nh;
+Int64 pwm1;
 
 void messangeCb(const std_msgs::Int64& toggle_msg)
 {
-  
-  digitalWrite(13, HIGH-digitalRead(13));
+  pwm1 = toggle_msg;
 }
 
 ros::Subscriber<std_msgs::Int64> sub("toggle_led", &messangeCb);
 
 void setup()
 {
-    pinMode(13, OUTPUT);
-    nh.initNode();
-    nh.subscribe(sub);
+  pinMode(PIN_PWM_LEFT, OUTPUT);  
+  pinMode(PIN_DIR_LEFT, OUTPUT);
+  pinMode(PIN_PWM_RIGHT, OUTPUT);
+  pinMode(PIN_DIR_RIGHT, OUTPUT);
+
+  nh.initNode();
+  nh.subscribe(sub);
 }
 
 void loop()
 {
-    nh.spinOnce();
-    delay(1);
+  nh.spinOnce();
+
+  analogWrite(PIN_PWM_LEFT, pwm1);
+  digitalWrite(PIN_DIR_LEFT, HIGH);
+
+  analogWrite(PIN_PWM_RIGHT, pwm1);
+  digitalWrite(PIN_DIR_RIGHT, LOW);
+
+  delay(1);
 }
