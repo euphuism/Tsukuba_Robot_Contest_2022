@@ -1,14 +1,15 @@
 #include <ros.h>
-#include <std_msgs/Empty.h>
+#include <std_msgs/Int64.h>
 
 ros::NodeHandle nh;
 
-void messangeCb(const std_msgs::Empty& toggle_msg)
+void messangeCb(const std_msgs::Int64& toggle_msg)
 {
-    digitalWrite(13, HIGH-digitalRead(13));
+  
+  digitalWrite(13, HIGH-digitalRead(13));
 }
 
-ros::Subscriber<std_msgs::Empty> sub("toggle_led", &messangeCb);
+ros::Subscriber<std_msgs::Int64> sub("toggle_led", &messangeCb);
 
 void setup()
 {
