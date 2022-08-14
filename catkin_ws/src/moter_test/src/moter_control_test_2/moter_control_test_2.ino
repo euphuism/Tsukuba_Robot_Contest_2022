@@ -1,5 +1,5 @@
 #include <ros.h>
-#include <std_msgs/Empty.h>
+#include <std_msgs/String.h>
 
 #define PIN_PWM_LEFT 10
 #define PIN_DIR_LEFT 11
@@ -9,13 +9,12 @@
 ros::NodeHandle nh;
 int64_t pwm1;
 
-void messangeCb(const std_msgs::Empty& toggle_msg)
+void messangeCb(const std_msgs::String& toggle_msg)
 {
-  String str = (String)toggle_msg;
-  pwm1 = str.toInt();
+  pwm1 = toggle_msg.toInt();
 }
 
-ros::Subscriber<std_msgs::Empty&> sub("toggle_led", &messangeCb);
+ros::Subscriber<std_msgs::String&> sub("toggle_led", &messangeCb);
 
 void setup()
 {
