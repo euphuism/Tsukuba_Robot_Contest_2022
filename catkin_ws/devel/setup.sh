@@ -1,0 +1,1 @@
+/home/parallels/Documents/GitHub/Tsukuba_Robot_Contest_2022/catkin_ws/devel/.private/catkin_tools_prebuild/setup.sh
