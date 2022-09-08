@@ -12,9 +12,12 @@ int64_t pwm;
 void messangeCb(const std_msgs::Int64& toggle_msg)
 {
   pwm = toggle_msg.data;
+  
+  if(pwm > 255) pwm = 255;
+  if(pwm < -255) pwm = -255;
 }
 
-ros::Subscriber<std_msgs::Int64&> sub("toggle_led", &messangeCb);
+ros::Subscriber<std_msgs::Int64> sub("toggle_led", &messangeCb);
 
 void setup()
 {
@@ -23,10 +26,12 @@ void setup()
   pinMode(PIN_PWM_RIGHT, OUTPUT);
   pinMode(PIN_DIR_RIGHT, OUTPUT);
 
+  Serial.begin(57600);
+  nh.getHardware()->setBaud(57600);
   nh.initNode();
   nh.subscribe(sub);
+  pwm = 0;
 }
-
 void loop()
 {
   nh.spinOnce();
