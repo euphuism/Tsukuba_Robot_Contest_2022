@@ -10,7 +10,7 @@ int main(int argv,char** argc){
   ros::NodeHandle nh;
   ros::NodeHandle pnh("~");
   ros::Publisher chatter_pub = nh.advertise<msgs::Motor>("chatter", 10);
-  std::String msg_chatter = "HalloWorld";
+  std::string msg_chatter = "HalloWorld";
   pnh.getParam("power", msg_chatter);
 
   ros::Rate loop_rate(10);
