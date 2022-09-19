@@ -19,8 +19,8 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable()
+#  add_executable()
 
-target_link_libraries(
-  ${catkin_LIBRARIES}
-)
+#  target_link_libraries(
+#    ${catkin_LIBRARIES}
+#  )
