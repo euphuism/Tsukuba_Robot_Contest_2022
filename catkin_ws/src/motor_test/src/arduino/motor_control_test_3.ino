@@ -40,7 +40,7 @@ void loop()
   digitalWrite(PIN_DIR_LEFT, HIGH);
 
   analogWrite(PIN_PWM_RIGHT, pwm);
-  digitalWrite(PIN_DIR_RIGHT, LOW);
+  digitalWrite(PIN_DIR_RIGHT, HIGH);
 
   delay(1);
 }
