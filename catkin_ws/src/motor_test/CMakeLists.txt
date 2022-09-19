@@ -5,6 +5,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  msgs
 )
 
 catkin_package(
@@ -21,6 +22,8 @@ include_directories(
 
 add_executable(publisher src/publisher.cpp)
 add_executable(subscriber src/subscriber.cpp)
+
+# add_dependencies()
 
 target_link_libraries(publisher
   ${catkin_LIBRARIES}
