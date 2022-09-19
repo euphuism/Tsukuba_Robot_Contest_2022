@@ -1,6 +1,6 @@
 // From https://github.com/kkkenty/robot03/blob/master/src/arduino/motor_controller/motor_control.cpp
 
-#include "motor_control.h"
+#include "encoder_test_1.h"
 //------------------------------------------------
 //  グローバル変数定義
 //------------------------------------------------

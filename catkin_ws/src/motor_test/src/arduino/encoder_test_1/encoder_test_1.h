@@ -1,7 +1,7 @@
 // From https://github.com/kkkenty/robot03/blob/master/src/arduino/motor_controller/motor_controller.ino
 
-#ifndef MOTOR_CONTROL_H
-#define MOTOR_CONTROL_H
+#ifndef ENCODER_TEST_1_H
+#define ENCODER_TEST_1_H
 //------------------------------------------------
 #include "Arduino.h"
 //------------------------------------------------
