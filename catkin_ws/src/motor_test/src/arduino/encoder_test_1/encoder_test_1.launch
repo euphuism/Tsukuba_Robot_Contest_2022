@@ -1,6 +1,10 @@
 <launch>
-  <node name="arduino_node" pkg="rosserial_python" type="serial_node" output="screen"/>
-  <node name="pulish_power_info" pkg="motor_test" type="pub_power">
+  <node name="arduino_node" pkg="rosserial_python" type="serial_node" output="screen">
+    <param name="port" type="int" value="/devttyACM0"/>
+    <param name="baud" type="string" value="57600"/>
+  </node>
+
+  <node name="pulish_power_info" pkg="motor_test" type="pub_power" output="screen">
     <param name="power" value="10.0/10.0"/>
   </node>
 </launch>
