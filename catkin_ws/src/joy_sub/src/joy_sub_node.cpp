@@ -2,10 +2,10 @@
 #include <sensor_msgs/Joy.h>
 
 // define the allocation of sticks and buttons
-define LEFT_AXES_LR 0;
-define LEFT_AXES_UD 1;
-define RIGHT_AXES_LR 2;
-define RIGHT_AXES_UD 3;
+#define LEFT_AXES_LR 0;
+#define LEFT_AXES_UD 1;
+#define RIGHT_AXES_LR 2;
+#define RIGHT_AXES_UD 3;
 
 void joy_callback(const sensor_msgs::Joy &joy_msg)
 {
