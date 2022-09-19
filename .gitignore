@@ -1,5 +1,6 @@
 .vscode/arduino.json
 .vscode/c_cpp_properties.json
+.vscode/settings.json
 
 /catkin_ws/build/
 /catkin_ws/devel/
