@@ -8,9 +8,9 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES moter_test
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+  INCLUDE_DIRS include
+  LIBRARIES moter_test
+  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -19,8 +19,9 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-#  add_executable()
+add_executable(publisher src/publisher.cpp)
+add_executable(subscriber src/subscriber.cpp)
 
-#  target_link_libraries(
-#    ${catkin_LIBRARIES}
-#  )
+target_link_libraries(
+  ${catkin_LIBRARIES}
+)
