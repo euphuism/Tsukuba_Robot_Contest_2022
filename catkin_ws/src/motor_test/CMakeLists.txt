@@ -22,6 +22,7 @@ include_directories(
 
 add_executable(publisher src/publisher.cpp)
 add_executable(subscriber src/subscriber.cpp)
+add_executable(pub_power src/pub_power.cpp)
 
 # add_dependencies()
 
@@ -31,3 +32,5 @@ target_link_libraries(publisher
 target_link_libraries(subscriber
   ${catkin_LIBRARIES}
 )
+target_link_libraries(pub_power
+  ${catkin_LIBRARIES})
