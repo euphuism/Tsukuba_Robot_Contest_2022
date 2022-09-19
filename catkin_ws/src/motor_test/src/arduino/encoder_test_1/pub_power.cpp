@@ -26,8 +26,8 @@ int main(int argv,char** argc){
     control.left = mot_left;
     control.right = mot_right;
 
-    ROS_INFO("LEFT: %s", control.left);
-    ROS_INFO("RIGHT: %s", control.right);
+    ROS_INFO("LEFT: %f", control.left);
+    ROS_INFO("RIGHT: %f", control.right);
 
     chatter_pub.publish(control);
     ros::spinOnce();
