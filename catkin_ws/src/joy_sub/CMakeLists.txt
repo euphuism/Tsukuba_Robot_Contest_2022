@@ -6,9 +6,9 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES joy_sub
-#  CATKIN_DEPENDS roscpp
+  INCLUDE_DIRS include
+  LIBRARIES joy_sub
+  CATKIN_DEPENDS roscpp
 #  DEPENDS system_lib
 )
 
