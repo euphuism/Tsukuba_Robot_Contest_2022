@@ -22,7 +22,7 @@ include_directories(
 
 add_executable(publisher src/publisher.cpp)
 add_executable(subscriber src/subscriber.cpp)
-add_executable(pub_power src/arduino/encoder_test/pub_power.cpp)
+add_executable(pub_power src/arduino/encoder_test_1/pub_power.cpp)
 
 # add_dependencies()
 
