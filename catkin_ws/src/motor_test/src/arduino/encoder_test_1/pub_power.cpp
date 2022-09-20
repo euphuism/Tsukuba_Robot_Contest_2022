@@ -3,7 +3,6 @@
 #include <sstream>
 
 msgs::Motor control;
-float mot_left = 0.0, mot_right = 0.0;
 
 int main(int argv,char** argc){
 
@@ -20,12 +19,9 @@ int main(int argv,char** argc){
   {
     std::stringstream ss;
     ss << msg_chatter;
-    ss >> mot_left;
+    ss >> control.left;
     ss.ignore();
-    ss >> mot_right;
-
-    control.left = mot_left;
-    control.right = mot_right;
+    ss >> control.right;
 
     ROS_INFO("LEFT: %f", control.left);
     ROS_INFO("RIGHT: %f", control.right);
