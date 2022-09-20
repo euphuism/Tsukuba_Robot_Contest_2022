@@ -1,5 +1,6 @@
 #include <ros/ros.h>
 #include <msgs/Motor.h>
+#include <sstream>
 
 msgs::Motor control;
 float mot_left = 0.0, mot_right = 0.0;
