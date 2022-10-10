@@ -1,6 +1,7 @@
-#include "encoder_test_1.h"
+// 目標速度を取得し、Arduino内で速度制御する
+#include "motor_control.h"
 #include <ros.h>
-#include <msgs/Motor.h>
+#include "msgs/Motor.h"
 
 encoder enc_left(PIN_A_LEFT, PIN_B_LEFT);
 encoder enc_right(PIN_A_RIGHT, PIN_B_RIGHT);
