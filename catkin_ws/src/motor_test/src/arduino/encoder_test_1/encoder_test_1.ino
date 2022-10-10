@@ -1,3 +1,5 @@
+// From https://github.com/kkkenty/robot03/blob/master/src/arduino/motor_controller/motor_controller.ino
+
 // 目標速度を取得し、Arduino内で速度制御する
 #include "motor_control.h"
 #include <ros.h>
