@@ -8,3 +8,4 @@
 /catkin_ws/.catkin_tools
 
 .DS_Store
+catkin_ws/.catkin_tools/profiles/default/devel_collisions.txt
